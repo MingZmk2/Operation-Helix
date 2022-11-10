@@ -18,7 +18,7 @@ In addition, this project will include:
 - Ability to hover data in the graph to highlight a specific stat
 
 ## Wireframes
-[wireframe](https://imgur.com/a/nHXgJB7)
+![wireframe](images/wireframe.png)
 
 ## Technologies, Libraries, APIs
 - Vanilla Javascript
