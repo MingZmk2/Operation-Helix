@@ -7,11 +7,90 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
-    <title>Project Name</title>
+    <title>Operation Helix</title>
   </head>
 
   <body>
-    <div id="main">hellow</div>
-  </body>
+    <nav class="main-nav">
+        <ul class="main-logo-items">
+            <img class="link-logo" src="./assets/helix.png" alt="">
+            <h1 class="main-logo">Operation Helix</h1>
+        </ul>
+        <ul class="links">
+            <li>
+                <button class="instructions">
+                    Instructions
+                </button>
+            </li>
+            <li>
+                <a href="https://github.com/">
+                    <img class="link-logo" src="./assets/github-logo.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/">
+                    <img class="link-logo" src="./assets/linkedin-logo.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://angel.co/">
+                    <img class="link-logo" src="./assets/angellist-logo.png">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <nav class="modal-header">
+                <span class="close">&times;</span>
+                <h1 class="modal-main-header">How to use</h1>
+            </nav>
+            <section class="modal-subsection">
+                <h2 class="modal-subheader">1) Select your players</h2>
+                <ul>
+                    <li class="instruction"></li>
+                    <li class="instruction"></li>
+                    <li class="instruction"></li>
+                </ul>
+            </section>
+            <section class="modal-subsection">
+                <h2 class="modal-subheader">choose your Specific player</h2>
+                <ul>
+                    <li class="instruction"></li>
+                    <li class="instruction">n</li>
+                    <li class="instruction"></li>
+                    <ul>
+                        <li class="italic instruction"></li>
+                    </ul>
+                </ul>
+            </section>
+            <section class="modal-subsection">
+                <h2 class="modal-subheader">3) Visualize the Data</h2>
+                <ul>
+                    <li class="instruction"></li>
+                    <li class="instruction"></li>
+                    <li class="instruction"></li>
+                </ul>
+            </section>
+            <nav class="demo-nav">
+                <ul class="demo-buttons">
+                    <li>
+                        <button class="demo-button" id="demo-bar">Demo Bar Chart</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <nav class="player-selection">
+        <div class="player-search">
+        </div>
+        <ul class="selected-players"></ul>
+        <div id="data-visualization"></div>
+        <div id="chart-tool-tip"></div>
+        <div class="download-container">
+            <button class="download button">Download Chart</button>
+        </div>
+    </section>
+</body>
 
 </html>
