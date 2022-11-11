@@ -5,8 +5,6 @@ Operation Helix is a dashboard that provides Counter-Strike: Global Offensive es
 
 
 ## Functionality & MVPs
-Fill in this template:
-
 In Operation Helix, users will be able to:
 - Sidebar for player selection based off teams
 - Data visualize selected players in a graph
