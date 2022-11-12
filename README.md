@@ -5,8 +5,6 @@ Operation Helix is a dashboard that provides Counter-Strike: Global Offensive es
 
 
 ## Functionality & MVPs
-Fill in this template:
-
 In Operation Helix, users will be able to:
 - Sidebar for player selection based off teams
 - Data visualize selected players in a graph
@@ -18,7 +16,7 @@ In addition, this project will include:
 - Ability to hover data in the graph to highlight a specific stat
 
 ## Wireframes
-[wireframe](https://imgur.com/a/nHXgJB7)
+![wireframe](images/wireframe.png)
 
 ## Technologies, Libraries, APIs
 - Vanilla Javascript
@@ -28,8 +26,8 @@ In addition, this project will include:
 NPM and Webpack for JavaScript project management and file bundling
 
 ## Implementation Timeline
-- Friday: Set up project and start implementing HTML, CSS and fetching data from the API.
-- Weekend : Complete logic for data visualization using the data visual library of my choice.
-- Monday : Create interactive buttons, selections and animations.
-- Tuesday : Include HTML buttons for functionality.
-- Wednesday : Finish styling and refactoring code.
+- Friday: Set up project and start implementing HTML, CSS and begin process of fetching data from the API.
+- Weekend : Complete logic for data visualization using the data visual library of my choice and figure out how to implement the fetched data to appear on to the data graph.
+- Monday : Continue solving any data visualization logic if need and start creating interactive buttons for navigation bar and player selector.
+- Tuesday : Work on player card feature that will be fetched from api.
+- Wednesday : Finish styling and refactoring code. If I have any extra time I will add some additional styling like animation to each button.
