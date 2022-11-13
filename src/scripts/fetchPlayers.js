@@ -1,6 +1,5 @@
 export const getPlayersData = async function () {
-  const api_url = "https://hltv-api.vercel.app/api/players.json";
-  fetch(api_url)
+  fetch("http://localhost:5500/dist/teams.json")
     .then((res) => {
       if (!res.ok) {
         throw new Error("Network response was not ok");
