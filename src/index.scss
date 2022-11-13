@@ -3,9 +3,25 @@
 
 
 
-.main-nav {
+header {
+  border: 4px solid $color;
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: hwb(235 7% 84% / 0.278);
+
 }
+
+
+.link-logo{
+  width: 2%;
+}
+
+// nav {
+//   display: block;
+// }
 
 body {
   background-color: #1d3c56;
@@ -13,6 +29,16 @@ body {
 
 }
 
-.link-logo{
-  width: 2%;
+.players-section{
+  border: 4px solid yellow;
+}
+
+.players{
+  width: 100px;
+  height: 150px;
+}
+
+.players img{
+  width: 100%;
+  height: auto;
 }

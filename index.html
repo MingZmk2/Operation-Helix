@@ -11,34 +11,59 @@
   </head>
 
   <body>
-    <nav class="main-nav">
-        <ul class="main-logo-items">
-            <img class="link-logo" src="./dist/assets/helix-icon.png" alt="">
-            <h1 class="main-logo">Operation Helix</h1>
-        </ul>
-        <ul class="links">
-            <li>
-                <a class="modal-info" href="#">
-                    <img class="link-logo" src="./dist/assets/about-icon.png">
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/">
-                    <img class="link-logo" src="./dist/assets/github-logo.png">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/">
-                    <img class="link-logo" src="./dist/assets/linkedin-logo.png">
-                </a>
-            </li>
-            <li>
-                <a href="https://angel.co/">
-                    <img class="link-logo" src="./dist/assets/angellist-logo.png">
-                </a
-            </li>
-        </ul>
-    </nav>
+    <header>
+        <h1 class="main-logo-items">
+            <img class="link-logo" src="./dist/assets/helix-icon.png" alt="">Operation Helix
+        </h1>
+        <nav class="main-nav">
+            <a class="modal-info" href="#">
+                <img class="link-logo" src="./dist/assets/about-icon.png">
+            </a>
+            <a href="https://github.com/">
+                <img class="link-logo" src="./dist/assets/github-logo.png">
+            </a>
+            <a href="https://www.linkedin.com/">
+                <img class="link-logo" src="./dist/assets/linkedin-logo.png">
+            </a>        
+            <a href="https://angel.co/">
+                <img class="link-logo" src="./dist/assets/angellist-logo.png">
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="players-section">
+
+    
+            <div class="players-container">
+    
+              <h2>Players</h2>
+              
+              <form class="searchbox">
+                <input class="searchbar" type="text" placeholder="search" name="search">
+              </form>
+    
+              <div id="player-selection-container" class="players-list-container">
+              </div>
+                
+            </div>
+
+            <div class="bar-graph-info">
+                <!-- <canvas id="canvasChart"></canvas> -->
+            </div>
+
+            <div class="stats-picker">
+                
+            </div>
+
+
+          </section>
+    
+          <section class="player-card-section">
+            <div id="player-info">
+            </div>
+          </section>
+    </main>
+    
     <!-- <div id="about-modal" class="modal">
         <div class="modal-content">
             <nav class="modal-header">
