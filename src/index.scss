@@ -2,6 +2,17 @@
 @import "./styles/nav-main.scss";
 
 
+
 .main-nav {
-  color: $color;
+  color: white;
+}
+
+body {
+  background-color: #1d3c56;
+  color: white;
+
+}
+
+.link-logo{
+  width: 2%;
 }

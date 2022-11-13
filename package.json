@@ -19,6 +19,8 @@
     "babel-loader": "^9.1.0",
     "core-js": "^3.26.0",
     "css-loader": "^6.7.1",
+    "hltv": "^3.4.1",
+    "hltv-api": "^3.0.3",
     "mini-css-extract-plugin": "^2.6.1",
     "regenerator-runtime": "^0.13.10",
     "sass": "^1.56.1",

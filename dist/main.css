@@ -80,5 +80,14 @@ select {
 }
 
 .main-nav {
-  color: grey;
+  color: white;
+}
+
+body {
+  background-color: #1d3c56;
+  color: white;
+}
+
+.link-logo {
+  width: 2%;
 }
