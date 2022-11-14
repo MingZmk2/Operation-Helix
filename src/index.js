@@ -78,8 +78,8 @@ const statInfo = {
   mapsPlayed: "Total maps played professionally so far",
 };
 
-// left container for all players
-let emptyPlayerslist = document.getElementById("playersList");
+// // left container for all players
+// let emptyPlayerslist = document.getElementById("playersList");
 
 // Player stat sorting
 let selectedStat = "rating";
