@@ -34,7 +34,7 @@ function createPlayersList() {
       let teamLogo = document.createElement("img");
       teamLogo.title = player.nickname;
       teamLogo.src = `${team.logo}`;
-      teamLogo.alt = player.nickname;
+      teamLogo.alt = team.name;
       players.appendChild(teamLogo);
 
       let playerName = document.createElement("div");
@@ -44,5 +44,25 @@ function createPlayersList() {
     });
   });
 }
+
+//creating barchart
+
+const statToKey = {
+  Rating: "rating",
+  "Kill Death Ratio": "kdr",
+  "Headshot Percentage": "headshots",
+  Kills: "kills",
+  Deaths: "deaths",
+  "Maps Played": "mapsPlayed",
+};
+
+const statInfo = {
+  rating: "Above or below average numbers",
+  kdr: "Total player kills before dying in a match",
+  headshots: "Percentage of kills made with a headshot",
+  kills: "Total player kills so far professionally",
+  deaths: "Total game deaths so far professionally",
+  mapsPlayed: "Total maps played professionally so far",
+};
 
 createPlayersList();
