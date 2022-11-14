@@ -69,14 +69,14 @@ const statToKey = {
   "Maps Played": "mapsPlayed",
 };
 
-const statInfo = {
-  rating: "Above or below average numbers",
-  kdr: "Total player kills before dying in a match",
-  headshots: "Percentage of kills made with a headshot",
-  kills: "Total player kills so far professionally",
-  deaths: "Total game deaths so far professionally",
-  mapsPlayed: "Total maps played professionally so far",
-};
+// const statInfo = {
+//   rating: "Above or below average numbers",
+//   kdr: "Total player kills before dying in a match",
+//   headshots: "Percentage of kills made with a headshot",
+//   kills: "Total player kills so far professionally",
+//   deaths: "Total game deaths so far professionally",
+//   mapsPlayed: "Total maps played professionally so far",
+// };
 
 // // left container for all players
 // let emptyPlayerslist = document.getElementById("playersList");
@@ -101,7 +101,7 @@ let sortedPlayersStats = sortedPlayersArr.map(
   (playerObj) => playerObj[selectedStat]
 );
 let sortedNamesArr = sortedPlayersArr.map((playerObj) => playerObj.name);
-let axisUnit = statInfo[selectedStat];
+// let axisUnit = statInfo[selectedStat];
 let updatedLabel = Object.keys(statToKey).find(
   (key) => statToKey[key] === selectedStat
 );
@@ -136,7 +136,7 @@ let statsChart = new Chart(ctx, {
       x: {
         title: {
           display: true,
-          text: axisUnit,
+          // text: axisUnit,
           color: "white",
           font: {
             size: 16,
@@ -189,10 +189,10 @@ let statsChart = new Chart(ctx, {
 });
 
 // right stats picker
-let emptySpecsUlist = document.getElementById("statistics");
+let statsPicker = document.getElementById("statistics");
 
 //create eventListener for option to choose a stat to see
-emptySpecsUlist.addEventListener("click", (clickEvent) => {
+statsPicker.addEventListener("click", (clickEvent) => {
   document.querySelector(`.${selectedStat}`).classList.remove("selected");
   selectedStat = clickEvent.target.className;
   document.querySelector(`.${selectedStat}`).classList.add("selected");
@@ -216,7 +216,7 @@ emptySpecsUlist.addEventListener("click", (clickEvent) => {
     (key) => statToKey[key] === selectedStat
   );
 
-  axisUnit = statInfo[selectedStat];
+  // axisUnit = statInfo[selectedStat];
 
   statsChart.data.labels = sortedNamesArr;
   statsChart.data.datasets = [
@@ -228,7 +228,7 @@ emptySpecsUlist.addEventListener("click", (clickEvent) => {
       borderWidth: 1,
     },
   ];
-  statsChart.options.scales.x.title.text = axisUnit;
+  // statsChart.options.scales.x.title.text = axisUnit;
   statsChart.options.plugins.title.text = updatedLabel;
 
   if (selectedStat === "rating") {
