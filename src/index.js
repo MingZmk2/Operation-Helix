@@ -94,4 +94,88 @@ if (selectedStat === "deaths") {
   );
 }
 
-console.log(sortedPlayersArr);
+// console.log(sortedPlayersArr);
+
+//begin building bar chart
+let sortedPlayersStats = sortedPlayersArr.map(
+  (playerObj) => playerObj[selectedStat]
+);
+let sortedNamesArr = sortedPlayersArr.map((playerObj) => playerObj.name);
+let axisUnit = statInfo[selectedStat];
+let updatedLabel = Object.keys(statToKey).find(
+  (key) => statToKey[key] === selectedStat
+);
+
+const ctx = document.getElementById("statsChart").getContext("2d");
+const gradient = ctx.createLinearGradient(5, 730, 5, 100);
+gradient.addColorStop(0, "#BFBFBF");
+gradient.addColorStop(1, "#403F40");
+
+//declare variable to initiate new bar Chart instance
+let statsChart = new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: sortedNamesArr,
+    datasets: [
+      {
+        label: selectedStat, //`${Object.keys(playersArr[0])[1]}`
+        data: sortedPlayersStats,
+        backgroundColor: gradient,
+        borderColor: ["rgba(0, 0, 0, 0.1)"],
+        borderWidth: 1,
+      },
+    ],
+  },
+  options: {
+    indexAxis: "y",
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: axisUnit,
+          font: {
+            size: 16,
+          },
+        },
+        position: "top",
+        ticks: {
+          font: {
+            size: 14,
+          },
+          callback: function (value, index, ticks) {
+            return new Intl.NumberFormat().format(value);
+          },
+        },
+      },
+      y: {
+        ticks: {
+          font: {
+            size: 14,
+          },
+        },
+        //possibile alternative to reverse values
+        // reverse: reversed
+      },
+    },
+    plugins: {
+      title: {
+        display: true,
+        fullSize: false,
+        text: updatedLabel,
+        font: {
+          size: 24,
+        },
+      },
+      tooltip: {
+        callbacks: {
+          label: function (context) {
+            return new Intl.NumberFormat().format(context.parsed.x);
+          },
+        },
+      },
+      legend: {
+        display: false,
+      },
+    },
+  },
+});
