@@ -45,8 +45,21 @@ function createPlayersList() {
   });
 }
 
-//creating barchart
+createPlayersList();
 
+//fucntion to return an array of object players
+let playersArr = [];
+
+function getPlayersFomArr() {
+  teams.forEach((team) =>
+    team.players.forEach((player) => playersArr.push(player))
+  );
+}
+
+getPlayersFomArr();
+// console.log(playersArr);
+
+//creating bar chart
 const statToKey = {
   Rating: "rating",
   "Kill Death Ratio": "kdr",
@@ -65,4 +78,20 @@ const statInfo = {
   mapsPlayed: "Total maps played professionally so far",
 };
 
-createPlayersList();
+// left container for all players
+let emptyPlayerslist = document.getElementById("playersList");
+
+// Player stat sorting
+let selectedStat = "deaths";
+let sortedPlayersArr;
+if (selectedStat === "deaths") {
+  sortedPlayersArr = playersArr.sort(
+    (a, b) => a[selectedStat] - b[selectedStat]
+  );
+} else {
+  sortedPlayersArr = playersArr.sort(
+    (a, b) => b[selectedStat] - a[selectedStat]
+  );
+}
+
+console.log(sortedPlayersArr);
