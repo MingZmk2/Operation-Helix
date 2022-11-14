@@ -13,6 +13,10 @@ header {
 
 }
 
+// .main-nav{
+//   flex-wrap: wrap;
+// }
+
 
 .link-logo{
   width: 2%;
@@ -47,7 +51,7 @@ main {
     flex-direction: column;
     width: 175px;
     min-width: 175px;
-    max-height: 640px;
+    max-height: 800px;
     border: 2px double rgba(222, 178, 66, 0.927);
     border-radius: 10px;
     padding: 10px;
