@@ -129,6 +129,8 @@ let statsChart = new Chart(ctx, {
     ],
   },
   options: {
+    maintainAspectRatio: false,
+    responsive: true,
     indexAxis: "y",
     scales: {
       x: {
@@ -142,10 +144,10 @@ let statsChart = new Chart(ctx, {
         },
         position: "top",
         ticks: {
-          color: "white",
           font: {
             size: 14,
           },
+          color: "white",
           callback: function (value, index, ticks) {
             return new Intl.NumberFormat().format(value);
           },
@@ -187,7 +189,7 @@ let statsChart = new Chart(ctx, {
 });
 
 // right stats picker
-let emptySpecsUlist = document.getElementById("statistic");
+let emptySpecsUlist = document.getElementById("statistics");
 
 //create eventListener for option to choose a stat to see
 emptySpecsUlist.addEventListener("click", (clickEvent) => {
@@ -242,6 +244,7 @@ emptySpecsUlist.addEventListener("click", (clickEvent) => {
     };
   } else {
     statsChart.options.scales.x.ticks = {
+      color: "white",
       font: {
         size: 14,
       },

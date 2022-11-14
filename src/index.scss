@@ -95,4 +95,24 @@ ul {
   list-style: none;
 }
 
+#buttons-section{
+  margin: 90px;
+}
 
+// #buttonsSection h1 {
+//   text-align: center;
+//   margin-left: 0;
+// }
+
+.selected {
+  background-color: #dab847 ;
+  color: #1f1f1f;
+}
+
+#statistics li:hover {
+  cursor: pointer;
+  background-color: #dab847;
+  color: #1f1f1f;
+  opacity: 90%;
+  transition-duration: 0.3s ;
+}
