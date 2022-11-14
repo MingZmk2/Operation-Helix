@@ -28,6 +28,12 @@ body {
 
 }
 
+main {
+  display: flex;
+  // justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 // .players-section{
 //   border: 4px solid yellow;
 // }
@@ -89,6 +95,13 @@ body {
 .players img{
   width: 100%;
   height: auto;
+}
+
+
+.wrapper{
+  display: block;
+  height: 800px;
+  width: 725px;
 }
 
 ul {

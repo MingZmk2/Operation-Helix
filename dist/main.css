@@ -92,6 +92,11 @@ body {
   color: white;
 }
 
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .players-section {
   display: flex;
   margin: 30px 50px;
@@ -149,6 +154,12 @@ body {
 .players img {
   width: 100%;
   height: auto;
+}
+
+.wrapper {
+  display: block;
+  height: 800px;
+  width: 725px;
 }
 
 ul {
