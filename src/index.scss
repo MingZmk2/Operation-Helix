@@ -7,9 +7,8 @@ header {
   border: 4px solid $color;
   color: white;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+  justify-content: center;
+  padding: 20px;
   background-color: hwb(235 7% 84% / 0.278);
 
 }
@@ -29,8 +28,57 @@ body {
 
 }
 
-.players-section{
-  border: 4px solid yellow;
+// .players-section{
+//   border: 4px solid yellow;
+// }
+
+.players-section {
+  display: flex;
+  margin: 30px 50px;
+  justify-content: start;
+  .players-container {
+    display: flex;
+    flex-direction: column;
+    width: 175px;
+    min-width: 175px;
+    max-height: 640px;
+    border: 2px double rgba(222, 178, 66, 0.927);
+    border-radius: 10px;
+    padding: 10px;
+    h2 {
+      text-align: center;
+      margin: 10px 0 15px;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .searchbox {
+      margin-bottom: 10px;
+      .searchbar {
+        border: 1px solid rgb(235, 235, 235);
+        max-width: 135px;
+        width: 135px;
+        height: 25px;
+        border-radius: 3px;
+        padding: 0px 20px;
+      }
+    }
+    #player-selection-container {
+      overflow-y: scroll;
+      .country-container {
+        margin-left: 0px;
+        .country-name {
+          position: relative;
+          top: -20px;
+          left: 60px;
+          font-size: 12px;
+          width: 115px;
+        }
+        .country-name:hover {
+          color: rgb(245, 217, 105);
+        }
+      }
+    }
+  }
 }
 
 .players{
@@ -42,3 +90,9 @@ body {
   width: 100%;
   height: auto;
 }
+
+ul {
+  list-style: none;
+}
+
+

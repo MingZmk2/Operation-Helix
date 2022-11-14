@@ -82,9 +82,9 @@ const statInfo = {
 let emptyPlayerslist = document.getElementById("playersList");
 
 // Player stat sorting
-let selectedStat = "deaths";
+let selectedStat = "rating";
 let sortedPlayersArr;
-if (selectedStat === "deaths") {
+if (selectedStat === "rating") {
   sortedPlayersArr = playersArr.sort(
     (a, b) => a[selectedStat] - b[selectedStat]
   );
@@ -107,9 +107,10 @@ let updatedLabel = Object.keys(statToKey).find(
 );
 
 const ctx = document.getElementById("statsChart").getContext("2d");
-const gradient = ctx.createLinearGradient(5, 730, 5, 100);
-gradient.addColorStop(0, "#BFBFBF");
-gradient.addColorStop(1, "#403F40");
+//if I possibly want gradient bar colors
+// const gradient = ctx.createLinearGradient(5, 730, 5, 100);
+// gradient.addColorStop(0, "#BFBFBF");
+// gradient.addColorStop(1, "#403F40");
 
 //declare variable to initiate new bar Chart instance
 let statsChart = new Chart(ctx, {
@@ -120,7 +121,8 @@ let statsChart = new Chart(ctx, {
       {
         label: selectedStat, //`${Object.keys(playersArr[0])[1]}`
         data: sortedPlayersStats,
-        backgroundColor: gradient,
+        //for gradient bar use backgroundColor: gradient
+        backgroundColor: ["rgba(255, 159, 64, 0.2)"],
         borderColor: ["rgba(0, 0, 0, 0.1)"],
         borderWidth: 1,
       },
@@ -133,12 +135,14 @@ let statsChart = new Chart(ctx, {
         title: {
           display: true,
           text: axisUnit,
+          color: "white",
           font: {
             size: 16,
           },
         },
         position: "top",
         ticks: {
+          color: "white",
           font: {
             size: 14,
           },
@@ -149,6 +153,7 @@ let statsChart = new Chart(ctx, {
       },
       y: {
         ticks: {
+          color: "white",
           font: {
             size: 14,
           },
@@ -162,6 +167,7 @@ let statsChart = new Chart(ctx, {
         display: true,
         fullSize: false,
         text: updatedLabel,
+        color: "white",
         font: {
           size: 24,
         },
@@ -178,4 +184,70 @@ let statsChart = new Chart(ctx, {
       },
     },
   },
+});
+
+// right stats picker
+let emptySpecsUlist = document.getElementById("statistic");
+
+//create eventListener for option to choose a stat to see
+emptySpecsUlist.addEventListener("click", (clickEvent) => {
+  document.querySelector(`.${selectedStat}`).classList.remove("selected");
+  selectedStat = clickEvent.target.className;
+  document.querySelector(`.${selectedStat}`).classList.add("selected");
+
+  if (selectedStat === "rating") {
+    sortedPlayersArr = playersArr.sort(
+      (a, b) => a[selectedStat] - b[selectedStat]
+    );
+  } else {
+    sortedPlayersArr = playersArr.sort(
+      (a, b) => b[selectedStat] - a[selectedStat]
+    );
+  }
+
+  sortedPlayersStats = sortedPlayersArr.map(
+    (playerObj) => playerObj[selectedStat]
+  );
+  sortedNamesArr = sortedPlayersArr.map((playerObj) => playerObj.nickname);
+
+  updatedLabel = Object.keys(statToKey).find(
+    (key) => statToKey[key] === selectedStat
+  );
+
+  axisUnit = statInfo[selectedStat];
+
+  statsChart.data.labels = sortedNamesArr;
+  statsChart.data.datasets = [
+    {
+      label: updatedLabel, //`${Object.keys(playersArr[0])[1]}`
+      data: sortedPlayersStats,
+      backgroundColor: ["rgba(255, 159, 64, 0.7)"],
+      borderColor: ["rgba(0, 0, 0, 0.1)"],
+      borderWidth: 1,
+    },
+  ];
+  statsChart.options.scales.x.title.text = axisUnit;
+  statsChart.options.plugins.title.text = updatedLabel;
+
+  if (selectedStat === "rating") {
+    statsChart.options.scales.x.ticks.callback = function (
+      value,
+      index,
+      ticks
+    ) {
+      return new Intl.NumberFormat().format(value);
+    };
+    statsChart.options.plugins.tooltip.callbacks.label = function (context) {
+      return Intl.NumberFormat().format(context.parsed.x);
+    };
+  } else {
+    statsChart.options.scales.x.ticks = {
+      font: {
+        size: 14,
+      },
+    };
+    statsChart.options.plugins.tooltip.callbacks = {};
+  }
+
+  statsChart.update();
 });

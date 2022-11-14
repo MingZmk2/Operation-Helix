@@ -33,38 +33,62 @@
     </header>
     <main>
         <section class="players-section">
-
-    
             <div class="players-container">
-    
               <h2>Players</h2>
-              
               <form class="searchbox">
                 <input class="searchbar" type="text" placeholder="search" name="search">
               </form>
-    
+
               <div id="player-selection-container" class="players-list-container">
-              </div>
-                
+              </div>   
             </div>
-
-            <div class="stats-picker">
-                
-            </div>
-
-
-          </section>
-
-          <section>
+            <!-- <div class="stats-picker">
+            </div> -->
+        </section>
+        
+        <section>
             <div>
                 <canvas id="statsChart" width="800" height="725"></canvas>
             </div>
-          </section>
+        </section>
     
-          <section class="player-card-section">
-            <div id="player-info">
-            </div>
-          </section>
+          <section id="buttons-section">
+            <h1>Choose your stat:</h1>
+              <ul id="statistic">
+                <li class="rating selected">
+                  <img class="rating" src="" alt="rating icon">
+                  <h2 class="rating">Rating</h2>
+                </li>
+
+                <li class="kdr">
+                  <img class="kdr" src="" alt="kdr icon">
+                  <h2 class="kdr">Kill Death Ratio</h2>
+                </li>
+
+                <li class="heashots">
+                  <img class="headshots" src="" alt="headshot icon">
+                  <h2 class="headshots">Headshot Percentage</h2>
+                </li>
+
+                <li class="kills">
+                  <img class="kills" src="" alt="kills icon">
+                  <h2 class="kills">Kills</h2>
+                </li>
+
+                <li class="deaths">
+                  <img class="deaths" src="" alt="deaths icon">
+                  <h2 class="deaths">Deaths</h2>
+                </li>
+
+                <li class="mapsPlayed">
+                  <img class="mapsPlayed" src="" alt="mapsPlayed icon">
+                  <h2 class="mapsPlayed">Maps Played</h2>
+                </li>
+
+              </ul>
+              <script src="src/index.js"></script>
+              
+            </section>
     </main>
 
 
