@@ -87,6 +87,12 @@ header {
   width: 2%;
 }
 
+nav {
+  display: block;
+  position: relative;
+  float: left;
+}
+
 body {
   background-color: #1d3c56;
   color: white;

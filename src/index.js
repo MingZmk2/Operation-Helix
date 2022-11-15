@@ -4,7 +4,8 @@
 
 //fetching from local host may cause problems will not use for now
 
-import teams from "./data/teams.json";
+// import teams from "./data/teams.json";
+import players from "./data/players.json";
 
 // teams.forEach((team) => console.log(team));
 
@@ -19,29 +20,27 @@ let playerSelectionContainer = document.getElementById(
 );
 
 function createPlayersList() {
-  teams.forEach((team) => {
-    team.players.forEach((player) => {
-      let playerContainer = document.createElement("div");
-      playerContainer.classList.add("player-container");
-      playerSelectionContainer.appendChild(playerContainer);
+  players.forEach((player) => {
+    let playerContainer = document.createElement("div");
+    playerContainer.classList.add("player-container");
+    playerSelectionContainer.appendChild(playerContainer);
 
-      let players = document.createElement("div");
-      players.classList.add("players");
-      players.setAttribute("id", player.nickname.replace(/ /g, ""));
-      // console.log(player.nickname);
-      playerContainer.appendChild(players);
+    let players = document.createElement("div");
+    players.classList.add("players");
+    players.setAttribute("id", player.nickname.replace(/ /g, ""));
+    // console.log(player.nickname);
+    playerContainer.appendChild(players);
 
-      let teamLogo = document.createElement("img");
-      teamLogo.title = team.name;
-      teamLogo.src = `${team.logo}`;
-      teamLogo.alt = team.name;
-      players.appendChild(teamLogo);
+    // let teamLogo = document.createElement("img");
+    // teamLogo.title = player.team;
+    // teamLogo.src = `${player.teamLogo}`;
+    // teamLogo.alt = player.team;
+    // players.appendChild(teamLogo);
 
-      let playerName = document.createElement("div");
-      playerName.classList.add("player-name");
-      players.appendChild(playerName);
-      playerName.textContent += player.nickname;
-    });
+    let playerName = document.createElement("div");
+    playerName.classList.add("player-name");
+    players.appendChild(playerName);
+    playerName.textContent += player.nickname;
   });
 }
 
@@ -51,9 +50,7 @@ createPlayersList();
 let playersArr = [];
 
 function getPlayersFomArr() {
-  teams.forEach((team) =>
-    team.players.forEach((player) => playersArr.push(player))
-  );
+  players.forEach((player) => playersArr.push(player));
 }
 
 getPlayersFomArr();
@@ -257,22 +254,20 @@ statsPicker.addEventListener("click", (clickEvent) => {
 
 //begin creating player info section
 function createCardForPlayer() {
-  teams.forEach((team) => {
-    team.players.forEach((player) => {
-      document
-        .getElementById(player.nickname.replace(/ /g, ""))
-        .addEventListener("click", (e) => {
-          e.preventDefault();
-          createPlayerCard(player);
-          // .then(window.scrollTo(0, 0))
-          // .then((document.querySelector(".searchbar").value = ""));
-          // .then(
-          //   playerContainerElement.forEach(
-          //     (e) => (e.style.display = "block")
-          //   )
-          // );
-        });
-    });
+  players.forEach((player) => {
+    document
+      .getElementById(player.nickname.replace(/ /g, ""))
+      .addEventListener("click", (e) => {
+        e.preventDefault();
+        createPlayerCard(player);
+        // .then(window.scrollTo(0, 0))
+        // .then((document.querySelector(".searchbar").value = ""));
+        // .then(
+        //   playerContainerElement.forEach(
+        //     (e) => (e.style.display = "block")
+        //   )
+        // );
+      });
   });
 }
 
@@ -353,7 +348,7 @@ function renderPlayerRegion(player, playerDataInfo) {
   playerRegion.appendChild(playerRegionFlag);
 }
 
-function renderPlayerTeamAffiliation(team, playerDataInfo) {
+function renderPlayerTeamAffiliation(player, playerDataInfo) {
   const playerTeam = document.createElement("div");
   playerTeam.classList.add("playerTeam");
   playerDataInfo.appendChild(playerTeam);
@@ -361,8 +356,14 @@ function renderPlayerTeamAffiliation(team, playerDataInfo) {
   playerTeamTitle.textContent = "Team:";
   playerTeam.appendChild(playerTeamTitle);
   const playerTeamInfo = document.createElement("div");
-  playerTeamInfo.textContent = team.name;
+  playerTeamInfo.textContent = player.team;
   playerTeam.appendChild(playerTeamInfo);
+
+  let teamLogo = document.createElement("img");
+  teamLogo.title = player.team;
+  teamLogo.src = `${player.teamLogo}`;
+  teamLogo.alt = player.team;
+  playerTeam.appendChild(teamLogo);
 }
 
 function renderPlayerAge(player, playerDataInfo) {

@@ -1,0 +1,370 @@
+[
+  {
+    "fullname": "Oleksandr Kostyliev",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/Q2u6AgnDNYQ3dyObwN4JBX.png?ixlib=java-2.1.0&w=400&s=5e19fa63867872bd78409f6e757ff6c3",
+    "nickname": "s1mple",
+    "country": {
+      "name": "Ukraine",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/UA.gif"
+    },
+    "team": "Natus Vincere",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/9iMirAi7ArBLNU8p3kqUTZ.svg?ixlib=java-2.1.0&s=4dd8635be16122656093ae9884675d0c",
+    "age": 25,
+    "rating": 1.26,
+    "kills": 28212,
+    "headshots": 41.4,
+    "deaths": 20453,
+    "kdr": 1.38,
+    "mapsPlayed": 1246
+  },
+  {
+    "fullname": "Mathieu Herbaut",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/R3MF_lTsMVSw1w6K744i91.png?ixlib=java-2.1.0&w=400&s=00f5abe7c10a1cb7ba784147d0ac00cf",
+    "nickname": "ZywOo",
+    "country": {
+      "name": "France",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/FR.gif"
+    },
+    "team": "Vitality",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/GAlByJtDTnkgbb9p_71SUL.png?ixlib=java-2.1.0&w=200&s=0817a9bbab2476869f9a3b09d51c0f62",
+    "age": 22,
+    "rating": 1.30,
+    "kills": 18786,
+    "headshots": 39.7,
+    "deaths": 13755,
+    "kdr": 1.37,
+    "mapsPlayed": 861
+  },
+  {
+    "fullname": "Nicolai Reedtz",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/7ekOWJWIHJwwQARzAlKGqL.png?ixlib=java-2.1.0&w=400&s=c9dad87cfe515731c0a166c843e288be",
+    "nickname": "device",
+    "country": {
+      "name": "Denmark",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/DK.gif"
+    },
+    "team": "Astralis",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/9bgXHp-oh1oaXr7F0mTGmd.svg?ixlib=java-2.1.0&s=f567161ab183001be33948b98c4b2067",
+    "age": 27,
+    "rating": 1.16,
+    "kills": 27018,
+    "headshots": 33.8,
+    "deaths": 21696,
+    "kdr": 1.25,
+    "mapsPlayed": 1333
+  },
+  {
+    "fullname": "Nikola Kovač",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/JDxiCoK-7_ZeBNCLNiSvFX.png?ixlib=java-2.1.0&w=400&s=d3ec14d8bad0ce37f4db73f1a82af92f",
+    "nickname": "NiKo",
+    "country": {
+      "name": "Bosnia and Herzegovina",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/BA.gif"
+    },
+    "team": "G2",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/zFLwAELOD15BjJSDMMNBWQ.png?ixlib=java-2.1.0&w=200&s=457c1663356d6dd20e39a1188b267802",
+    "age": 25,
+    "rating": 1.15,
+    "kills": 30060,
+    "headshots": 50.3,
+    "deaths": 25294,
+    "kdr": 1.19,
+    "mapsPlayed": 1432
+  },
+  {
+    "fullname": "Marcelo David",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/7gJL_LHILUk9b93DFpa7Ki.png?ixlib=java-2.1.0&w=400&s=730734713a117a1b931a2b9f6c91247d",
+    "nickname": "coldzera",
+    "country": {
+      "name": "Brazil",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/BR.gif"
+    },
+    "team": "00NATION",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/Od-bsmsaAdzX8YM5nwhI-I.png?ixlib=java-2.1.0&w=100&s=8f6a63f99fb1599667312b0f2c31f88f",
+    "age": 28,
+    "rating": 1.14,
+    "kills": 24944,
+    "headshots": 49.9,
+    "deaths": 20354,
+    "kdr": 1.23,
+    "mapsPlayed": 1249
+  },
+  {
+    "fullname": "Robin Kool",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/l_IS_AAkos3MIvUkU6p4qP.png?ixlib=java-2.1.0&w=400&s=374f67d6607b5a62de3198207477b06a",
+    "nickname": "ropz",
+    "country": {
+      "name": "Estonia",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/EE.gif"
+    },
+    "team": "FaZe",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/SMhzsxzbkIrgqCOOKGRXlW.svg?ixlib=java-2.1.0&s=e6a9ce0345c7d703e5eaac14307f69aa",
+    "age": 22,
+    "rating": 1.14,
+    "kills": 22249,
+    "headshots": 51.6,
+    "deaths": 18547,
+    "kdr": 1.20,
+    "mapsPlayed": 1138
+  },
+  {
+    "fullname": "Ismailcan Dörtkardeş",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/VL-Iz2KPu5lQJVshz-vuzP.png?ixlib=java-2.1.0&w=400&s=03b62628c8cacfdd0b788f977a18672c",
+    "nickname": "XANTARES",
+    "country": {
+      "name": "Turkey",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/TR.gif"
+    },
+    "team": "Eternal Fire",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/MoSNHyDSjZ3EaLpeSA9_oN.png?ixlib=java-2.1.0&w=200&s=31c8f7aefb3ac8b993fcfa5bcd5b7703",
+    "age": 27,
+    "rating": 1.20,
+    "kills": 28444,
+    "headshots": 53.1,
+    "deaths": 24756,
+    "kdr": 1.15,
+    "mapsPlayed": 1352
+  },
+  {
+    "fullname": "Russel Van Dulken",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/3W2WeF7zohMOjpjxGpurGG.png?ixlib=java-2.1.0&w=400&s=b81a58560cecf792aa16f0ee08f82ee4",
+    "nickname": "Twistzz",
+    "country": {
+      "name": "Canada",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/CA.gif"
+    },
+    "team": "FaZe",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/SMhzsxzbkIrgqCOOKGRXlW.svg?ixlib=java-2.1.0&s=e6a9ce0345c7d703e5eaac14307f69aa",
+    "age": 23,
+    "rating": 1.12,
+    "kills": 24920,
+    "headshots": 62.4,
+    "deaths": 21580,
+    "kdr": 1.15,
+    "mapsPlayed": 1305
+  },
+  {
+    "fullname": "Kenny Schrub",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/axSL5Ohh0Eew7VWavcPXsH.png?ixlib=java-2.1.0&w=400&s=c2910e9af97003c626b432d892b80d68",
+    "nickname": "kennyS",
+    "country": {
+      "name": "France",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/FR.gif"
+    },
+    "team": "Falcons",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/4eJSkDQINNM6Tbs4WvLzkN.png?ixlib=java-2.1.0&w=200&s=d4dd034c2c7786f7c75e51a3a3aa7b5c",
+    "age": 27,
+    "rating": 1.09,
+    "kills": 23255,
+    "headshots": 31.4,
+    "deaths": 20059,
+    "kdr": 1.16,
+    "mapsPlayed": 1191
+  },
+  {
+    "fullname": "Ladislav Kovács",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/yAqXqbDzYSFWZUNvMhdI07.png?ixlib=java-2.1.0&w=400&s=ad758e9a7138ef56ca6cd71dbccb90c0",
+    "nickname": "GuardiaN",
+    "country": {
+      "name": "Slovakia",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/SK.gif"
+    },
+    "team": "Sampi",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/N-F0P5LybEOHXimzRL81z4.png?ixlib=java-2.1.0&w=200&s=503a8ea3c25658632b636de32c1c51c6",
+    "age": 31,
+    "rating": 1.08,
+    "kills": 16571,
+    "headshots": 28.1,
+    "deaths": 14506,
+    "kdr": 1.14,
+    "mapsPlayed": 886
+  },
+  {
+    "fullname": "Nemanja Kovač",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/Gt-t5B9h3GI2DMgqbs5t7V.png?ixlib=java-2.1.0&w=400&s=fb8ca1ae044a1e8d3702c9ab2e8af4fe",
+    "nickname": "huNter-",
+    "country": {
+      "name": "Bosnia and Herzegovina",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/BA.gif"
+    },
+    "team": "G2",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/zFLwAELOD15BjJSDMMNBWQ.png?ixlib=java-2.1.0&w=200&s=457c1663356d6dd20e39a1188b267802",
+    "age": 26,
+    "rating": 1.15,
+    "kills": 22125,
+    "headshots": 50.3,
+    "deaths": 19801,
+    "kdr": 1.12,
+    "mapsPlayed": 1100
+  },
+  {
+    "fullname": "Denis Sharipov",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/BugxKUSuXiyJVpK4P27Ys1.png?ixlib=java-2.1.0&w=400&s=df57dc790d42aa3c5f8d9c8cd9ffb1cc",
+    "nickname": "electroNic",
+    "country": {
+      "name": "Russia",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/RU.gif"
+    },
+    "team": "Natus Vincere",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/9iMirAi7ArBLNU8p3kqUTZ.svg?ixlib=java-2.1.0&s=4dd8635be16122656093ae9884675d0c",
+    "age": 24,
+    "rating": 1.08,
+    "kills": 23091,
+    "headshots": 49.9,
+    "deaths": 20561,
+    "kdr": 1.12,
+    "mapsPlayed": 1185
+  },
+  {
+    "fullname": "Peter Rasmussen",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/QkC_ZTymmjbGLqdqE06asG.png?ixlib=java-2.1.0&w=400&s=239de2f24d0673ba7f5b2d98f4c43718",
+    "nickname": "dupreeh",
+    "country": {
+      "name": "Denmark",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/DK.gif"
+    },
+    "team": "Vitality",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/GAlByJtDTnkgbb9p_71SUL.png?ixlib=java-2.1.0&w=200&s=0817a9bbab2476869f9a3b09d51c0f62",
+    "age": 29,
+    "rating": 1.06,
+    "kills": 27287,
+    "headshots": 50.3,
+    "deaths": 24678,
+    "kdr": 1.11,
+    "mapsPlayed": 1452
+  },
+  {
+    "fullname": "Emil Reif",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/xcVpeQVx7inf9eYe7W9MuA.png?ixlib=java-2.1.0&w=400&s=970c806f73a4582c376fbf7d65e6654f",
+    "nickname": "Magisk",
+    "country": {
+      "name": "Denmark",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/DK.gif"
+    },
+    "team": "Vitality",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/GAlByJtDTnkgbb9p_71SUL.png?ixlib=java-2.1.0&w=200&s=0817a9bbab2476869f9a3b09d51c0f62",
+    "age": 24,
+    "rating": 1.07,
+    "kills": 26288,
+    "headshots": 47.6,
+    "deaths": 23392,
+    "kdr": 1.12,
+    "mapsPlayed": 1396
+  },
+  {
+    "fullname": "Jonathan Jablonowski",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/VbdRq54LyzLox47XpQv_Ir.png?ixlib=java-2.1.0&w=400&s=1a48ca4a65377b8056f9b7fad76608ad",
+    "nickname": "EliGE",
+    "country": {
+      "name": "United States",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/US.gif"
+    },
+    "team": "Liquid",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/JMeLLbWKCIEJrmfPaqOz4O.svg?ixlib=java-2.1.0&s=c02caf90234d3a3ebac074c84ba1ea62",
+    "age": 25,
+    "rating": 1.08,
+    "kills": 28774,
+    "headshots": 48.6,
+    "deaths": 26308,
+    "kdr": 1.09,
+    "mapsPlayed": 1450
+  },
+  {
+    "fullname": "Valdemar Bjørn Vangså",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/d_9lsU2dApzCAirZSKH5q0.png?ixlib=java-2.1.0&w=400&s=43c95c8289e3e02ed1103690f4cd582e",
+    "nickname": "valde",
+    "country": {
+      "name": "Denmark",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/DK.gif"
+    },
+    "team": "ENCE",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/-X8NoyWC_1gYqUHvZqcpkc.svg?ixlib=java-2.1.0&s=85bb9daa6f846fa097c5942f2565fdb8",
+    "age": 27,
+    "rating": 1.12,
+    "kills": 22567,
+    "headshots": 47.0,
+    "deaths": 20206,
+    "kdr": 1.12,
+    "mapsPlayed": 1165
+  },
+  {
+    "fullname": "Keith Markovic",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/MDAqvdYwLcEdZ6E7qO7HRf.png?ixlib=java-2.1.0&w=400&s=dc7dde86301365f164cc64ac37251461",
+    "nickname": "NAF",
+    "country": {
+      "name": "Canada",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/CA.gif"
+    },
+    "team": "Liquid",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/JMeLLbWKCIEJrmfPaqOz4O.svg?ixlib=java-2.1.0&s=c02caf90234d3a3ebac074c84ba1ea62",
+    "age": 24,
+    "rating": 1.08,
+    "kills": 26488,
+    "headshots": 41.3,
+    "deaths": 23200,
+    "kdr": 1.14,
+    "mapsPlayed": 1401
+  },
+  {
+    "fullname": "Abay Khasenov",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/7m5uS3kPGgdVVfk3qEW6RB.png?ixlib=java-2.1.0&w=400&s=44acad4032ce2104490e8cda0972e71a",
+    "nickname": "HObbit",
+    "country": {
+      "name": "Kazakhstan",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/KZ.gif"
+    },
+    "team": "Cloud9",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/bEgST6XoNV4ZdenRKzCQyl.svg?ixlib=java-2.1.0&s=bd9b10a8dfe7b3640103745687389e3c",
+    "age": 28,
+    "rating": 1.11,
+    "kills": 19657,
+    "headshots": 46.4,
+    "deaths": 18078,
+    "kdr": 1.09,
+    "mapsPlayed": 1029
+  },
+  {
+    "fullname": "Josh Ohm",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/Bq-o0nulU4G2xOGoLp5AfH.png?ixlib=java-2.1.0&w=400&s=e11427343924455fd4c5ce888f32f521",
+    "nickname": "oSee",
+    "country": {
+      "name": "United States",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/US.gif"
+    },
+    "team": "Liquid",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/JMeLLbWKCIEJrmfPaqOz4O.svg?ixlib=java-2.1.0&s=c02caf90234d3a3ebac074c84ba1ea62",
+    "age": 23,
+    "rating": 1.11,
+    "kills": 12288,
+    "headshots": 30.2,
+    "deaths": 10675,
+    "kdr": 1.15,
+    "mapsPlayed": 637
+  },
+  {
+    "fullname": "Dzhami Ali",
+    "image": "https://img-cdn.hltv.org/playerbodyshot/2Z5O3KO3RulVuGzSWUuk8d.png?ixlib=java-2.1.0&w=400&s=9b1bd9a92f6a947ffa877405fcb7a906",
+    "nickname": "Jame",
+    "country": {
+      "name": "Russia",
+      "flag": "https://www.hltv.org/img/static/flags/30x20/RU.gif"
+    },
+    "team": "Outsiders",
+    "teamLogo": "https://img-cdn.hltv.org/teamlogo/K15IzjKuVPxnoWr3J3-tJ7.png?ixlib=java-2.1.0&w=200&s=d4a13a57097678559bf11e29694501f8",
+    "age": 24,
+    "rating": 1.16,
+    "kills": 19717,
+    "headshots": 25.0,
+    "deaths": 15411,
+    "kdr": 1.28,
+    "mapsPlayed": 1047
+  }
+]
+
+
+
+
+
+
+
+
