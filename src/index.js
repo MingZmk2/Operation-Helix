@@ -32,7 +32,7 @@ function createPlayersList() {
       playerContainer.appendChild(players);
 
       let teamLogo = document.createElement("img");
-      teamLogo.title = player.nickname;
+      teamLogo.title = team.name;
       teamLogo.src = `${team.logo}`;
       teamLogo.alt = team.name;
       players.appendChild(teamLogo);
@@ -254,3 +254,139 @@ statsPicker.addEventListener("click", (clickEvent) => {
 
   statsChart.update();
 });
+
+//begin creating player info section
+function createCardForPlayer() {
+  teams.forEach((team) => {
+    team.players.forEach((player) => {
+      document
+        .getElementById(player.nickname.replace(/ /g, ""))
+        .addEventListener("click", (e) => {
+          e.preventDefault();
+          createPlayerCard(player);
+          // .then(window.scrollTo(0, 0))
+          // .then((document.querySelector(".searchbar").value = ""));
+          // .then(
+          //   playerContainerElement.forEach(
+          //     (e) => (e.style.display = "block")
+          //   )
+          // );
+        });
+    });
+  });
+}
+
+async function createPlayerCard(player) {
+  createPlayerInfoContainer(player);
+}
+
+function createPlayerInfoContainer(player) {
+  const playerInfo = document.getElementById("playerInfo");
+  playerInfo.innerHTML = "";
+
+  const playerInfoInner1 = document.createElement("div");
+  const playerInfoInner2 = document.createElement("div");
+  playerInfo.appendChild(playerInfoInner1);
+  playerInfoInner1.classList.add("player-info-inner-1");
+  playerInfo.appendChild(playerInfoInner2);
+  playerInfoInner2.classList.add("player-info-inner-2");
+
+  renderPlayerPicture(player, playerInfoInner1);
+  renderPlayerInGameName(player, playerInfoInner2);
+
+  const playerDataInfo = document.createElement("div");
+  playerDataInfo.classList.add("player-data-info");
+  playerInfoInner2.appendChild(playerDataInfo);
+
+  renderPlayerFullName(player, playerDataInfo);
+  renderPlayerRegion(player, playerDataInfo);
+  renderPlayerTeamAffiliation(player, playerDataInfo);
+  renderPlayerAge(player, playerDataInfo);
+  renderPlayerRating(player, playerDataInfo);
+}
+
+function renderPlayerPicture(player, playerInfoInner1) {
+  const playerPicture = document.createElement("img");
+  playerPicture.classList.add("player-picture");
+  playerPicture.title = player.nickname;
+  playerPicture.src = `${player.image}`;
+  playerPicture.srcset = `${player.image}`;
+  playerPicture.alt = player.nickname;
+  playerInfoInner1.appendChild(playerPicture);
+}
+
+function renderPlayerInGameName(player, playerInfoInner2) {
+  const playerTitle = document.createElement("h2");
+  playerTitle.classList.add("player-title");
+  playerTitle.textContent = player.nickname;
+  playerInfoInner2.appendChild(playerTitle);
+}
+
+function renderPlayerFullName(player, playerDataInfo) {
+  const playerFullName = document.createElement("div");
+  playerFullName.classList.add("playerFullName");
+  playerDataInfo.appendChild(playerFullName);
+  const playerFullNameTitle = document.createElement("h4");
+  playerFullNameTitle.textContent = "Full Name:";
+  playerFullName.appendChild(playerFullNameTitle);
+  const playerFullNameInfo = document.createElement("div");
+  playerFullNameInfo.textContent = player.fullname;
+  playerFullName.appendChild(playerFullNameInfo);
+}
+
+function renderPlayerRegion(player, playerDataInfo) {
+  const playerRegion = document.createElement("div");
+  playerRegion.classList.add("playerRegion");
+  playerDataInfo.appendChild(playerRegion);
+  const playerRedionTitle = document.createElement("h4");
+  playerRedionTitle.textContent = "Region: ";
+  playerRegion.appendChild(playerRedionTitle);
+  // const playerRegionInfo = document.createElement("div");
+  // playerRegionInfo.textContent = player.country.name;
+  // playerRegion.appendChild(playerRegionInfo);
+  const playerRegionFlag = document.createElement("img");
+  playerRegionFlag.classList.add("player-region-flag");
+  playerRegionFlag.title = player.country.name;
+  playerRegionFlag.src = `${player.country.flag}`;
+  playerRegionFlag.srcset = `${player.country.flag}`;
+  playerRegionFlag.alt = player.country.name;
+  playerRegion.appendChild(playerRegionFlag);
+}
+
+function renderPlayerTeamAffiliation(team, playerDataInfo) {
+  const playerTeam = document.createElement("div");
+  playerTeam.classList.add("playerTeam");
+  playerDataInfo.appendChild(playerTeam);
+  const playerTeamTitle = document.createElement("h4");
+  playerTeamTitle.textContent = "Team:";
+  playerTeam.appendChild(playerTeamTitle);
+  const playerTeamInfo = document.createElement("div");
+  playerTeamInfo.textContent = team.name;
+  playerTeam.appendChild(playerTeamInfo);
+}
+
+function renderPlayerAge(player, playerDataInfo) {
+  const playerAge = document.createElement("div");
+  playerAge.classList.add("playerAge");
+  playerDataInfo.appendChild(playerAge);
+  const playerAgeNumber = document.createElement("h4");
+  playerAgeNumber.textContent = "Age:";
+  playerAge.appendChild(playerAgeNumber);
+  const playerAgeInfo = document.createElement("div");
+  playerAgeInfo.textContent = player.age;
+  playerAge.appendChild(playerAgeInfo);
+}
+
+function renderPlayerRating(player, playerDataInfo) {
+  const playerRating = document.createElement("div");
+  playerRating.classList.add("playerRating");
+  playerDataInfo.appendChild(playerRating);
+  const playerRatingScore = document.createElement("h4");
+  playerRatingScore.textContent = "Rating:";
+  playerRating.appendChild(playerRatingScore);
+  const playerRatingInfo = document.createElement("div");
+  playerRatingInfo.textContent = player.rating;
+  playerRating.appendChild(playerRatingInfo);
+}
+
+createCardForPlayer();
