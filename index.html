@@ -18,8 +18,11 @@
         </h1>
         <nav class="main-nav">
             <a class="modal-info" href="#">
-                <img class="link-logo" src="./dist/assets/about-icon.png">
+                <img id="open"  class="link-logo" src="./dist/assets/about-icon.png">
             </a>
+            <!-- <button id="open">
+              Modal Button
+            </button> -->
             <a href="https://github.com/">
                 <img class="link-logo" src="./dist/assets/github-logo.png">
             </a>
@@ -31,6 +34,15 @@
             </a>
         </nav>
     </header>
+
+    <div class="modal-container" id="modal_container">
+      <div class = "modal">
+        <h1>This will be my modal instruction 🥸🎮</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio saepe perspiciatis accusantium eligendi iste laborum inventore architecto laboriosam odit, quas neque iusto porro sequi fugiat repudiandae doloribus tempora? Impedit, dolorum.</p>
+        <button id="close">Close Modal</button>
+      </div>
+    </div>
+
     <main>
         <section class="players-section">
             <div class="players-container">
@@ -96,6 +108,8 @@
 
 
             </section>
+
+            
     </main>
 
 
