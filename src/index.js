@@ -91,17 +91,19 @@ if (selectedStat === "rating") {
   );
 }
 
-// console.log(sortedPlayersArr);
-
 //begin building bar chart
 let sortedPlayersStats = sortedPlayersArr.map(
   (playerObj) => playerObj[selectedStat]
 );
-let sortedNamesArr = sortedPlayersArr.map((playerObj) => playerObj.name);
+let sortedNamesArr = sortedPlayersArr.map((playerObj) => playerObj.nickname);
 // let axisUnit = statInfo[selectedStat];
 let updatedLabel = Object.keys(statToKey).find(
   (key) => statToKey[key] === selectedStat
 );
+
+console.log(sortedPlayersArr);
+console.log(sortedNamesArr);
+console.log(sortedPlayersStats);
 
 const ctx = document.getElementById("statsChart").getContext("2d");
 //if I possibly want gradient bar colors
@@ -119,8 +121,8 @@ let statsChart = new Chart(ctx, {
         label: selectedStat, //`${Object.keys(playersArr[0])[1]}`
         data: sortedPlayersStats,
         //for gradient bar use backgroundColor: gradient
-        backgroundColor: ["rgba(255, 159, 64, 0.2)"],
-        borderColor: ["rgba(0, 0, 0, 0.1)"],
+        backgroundColor: ["rgba(255, 159, 64, 0)"],
+        borderColor: ["rgba(0, 0, 0, 0)"],
         borderWidth: 1,
       },
     ],
@@ -154,7 +156,7 @@ let statsChart = new Chart(ctx, {
         ticks: {
           color: "white",
           font: {
-            size: 14,
+            size: 25,
           },
         },
         //possibile alternative to reverse values
@@ -215,7 +217,7 @@ statsPicker.addEventListener("click", (clickEvent) => {
 
   // axisUnit = statInfo[selectedStat];
 
-  statsChart.data.labels = sortedNamesArr;
+  statsChart.data.labels = sortedNamesArr.slice(0, 10);
   statsChart.data.datasets = [
     {
       label: updatedLabel, //`${Object.keys(playersArr[0])[1]}`
@@ -406,3 +408,19 @@ close.addEventListener("click", () => {
 });
 
 //search bar function
+function search_animal() {
+  let input = document.getElementById("searchbar").value;
+  input = input.toLowerCase();
+  let x = document.querySelector("#list-holder");
+  x.innerHTML = "";
+
+  for (i = 0; i < data.length; i++) {
+    let obj = data[i];
+
+    if (obj.Name.toLowerCase().includes(input)) {
+      const elem = document.createElement("li");
+      elem.innerHTML = `${obj.Name} - ${obj.Color}`;
+      x.appendChild(elem);
+    }
+  }
+}

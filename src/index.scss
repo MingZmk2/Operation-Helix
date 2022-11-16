@@ -3,13 +3,47 @@
 
 
 
+*{
+  justify-content: center;
+
+}
+
+body {
+  background-color: #1d3c56;
+  color: white;
+  font-family: Helvetica, sans-serif;
+}
+
+
 header {
-  border: 4px solid $color;
+  // border: 4px solid $color;
   color: white;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  position: absolute;
+  width: 100%;
+  height: 125px;
+  left: 0px;
+  top: 0px;
   background-color: hwb(235 7% 84% / 0.278);
+
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.main-nav {
+  // position: relative;
+  right: -210px;
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  width: 170px;
+  height: 50px;
+  right: 150px;
+  top: 37px;
 
 }
 
@@ -35,6 +69,27 @@ header {
   opacity:1;
 }
 
+.player-info-inner-1 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 343px;
+  top: 675px;
+}
+
+.player-info-inner-2{
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  left: 688px;
+  top: 675px;
+}
+
+.playerTeam > img{
+  width:50px;
+  height: 50px;
+}
+
 .modal {
   color: black;
   background-color: #fff;
@@ -54,21 +109,36 @@ header {
   opacity: 0.7;
 }
 
-.link-logo{
-  width: 2%;
+.main-logo-items {
+  font-weight: 700;
+  font-size: 35px;
+  font-family: sans-serif;
+  position: absolute;
+  width: 459px;
+  height: 60px;
+  left: 50px;
+  top: 32px;
 }
 
-nav {
-  display: block;
-  position: relative;
+.link-logo {
+  width: 30px;
+  height: 30px;
+  
+}
+
+.site-logo{
+  width: 50px;
+  height: 50px;
   float: left;
 }
 
-body {
-  background-color: #1d3c56;
-  color: white;
+// nav {
+//   display: block;
+//   position: relative;
+//   float: left;
+// }
 
-}
+
 
 main {
   display: flex;
@@ -81,16 +151,22 @@ main {
 // }
 
 .players-section {
+  position: absolute;
+  // width: 245px;
+  height: 450px;
+  left: 120px;
+  top: 175px;
   display: flex;
-  margin: 30px 50px;
+  // margin: 30px 0px;
   justify-content: start;
+  background-color: hwb(235 7% 84% / 0.278);
   .players-container {
     display: flex;
     flex-direction: column;
     width: 175px;
     min-width: 175px;
     max-height: 800px;
-    border: 2px double rgba(222, 178, 66, 0.927);
+    // border: 2px double rgba(222, 178, 66, 0.927);
     // border-radius: 10px;
     padding: 10px;
     h2 {
@@ -108,20 +184,26 @@ main {
         height: 25px;
         border-radius: 3px;
         padding: 0px 20px;
+        margin: 0 auto;
       }
     }
     #player-selection-container {
       overflow-y: scroll;
-      .country-container {
+       
+      .player-container {
         margin-left: 0px;
-        .country-name {
+        .players{
+          margin: 0 auto;
+        }
+        .player-name {
           position: relative;
-          top: -20px;
-          left: 60px;
-          font-size: 12px;
+          // top: 10px;
+          // left: 60px;
+          text-align: center;
+          font-size: 20px;
           width: 115px;
         }
-        .country-name:hover {
+        .player-name:hover {
           color: rgb(245, 217, 105);
         }
       }
@@ -129,9 +211,13 @@ main {
   }
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .players{
   width: 100px;
-  height: 150px;
+  height: 50px;
 }
 
 .players img{
@@ -140,10 +226,18 @@ main {
 }
 
 
-.wrapper{
-  display: block;
-  height: 800px;
-  width: 725px;
+.bar-chart{
+  background-color: hwb(235 7% 84% / 0.278);
+  position: absolute;
+  width: 559px;
+  height: 550px;
+  left: 400px;
+  top: 175px;
+}
+
+#statsChart{
+  width: 500px;
+  height: 500px;
 }
 
 ul {
@@ -151,7 +245,12 @@ ul {
 }
 
 #buttons-section{
-  margin: 90px;
+  position: absolute;
+  width: 340px;
+  height: 450px;
+  right: 50px;
+  top: 175px;
+  background-color: hwb(235 7% 84% / 0.278);
 }
 
 // #buttonsSection h1 {
@@ -172,7 +271,7 @@ ul {
   transition-duration: 0.3s ;
 }
 
-.player-info-section{
-  width: 300px;
-  border: 2px double rgba(222, 178, 66, 0.927);
-}
+// .player-info-section{
+//   width: 300px;
+//   // border: 2px double rgba(222, 178, 66, 0.927);
+// }
