@@ -115,7 +115,7 @@ const ctx = document.getElementById("statsChart").getContext("2d");
 let statsChart = new Chart(ctx, {
   type: "bar",
   data: {
-    labels: sortedNamesArr,
+    // labels: sortedNamesArr,
     datasets: [
       {
         label: selectedStat, //`${Object.keys(playersArr[0])[1]}`
