@@ -271,6 +271,7 @@ main {
 .bar-chart {
   background-color: hwb(235 7% 84%/0.278);
   position: absolute;
+  margin: 0 auto;
   width: 559px;
   height: 550px;
   left: 400px;
