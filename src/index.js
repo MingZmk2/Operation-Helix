@@ -101,9 +101,9 @@ let updatedLabel = Object.keys(statToKey).find(
   (key) => statToKey[key] === selectedStat
 );
 
-console.log(sortedPlayersArr);
-console.log(sortedNamesArr);
-console.log(sortedPlayersStats);
+// console.log(sortedPlayersArr);
+// console.log(sortedNamesArr);
+// console.log(sortedPlayersStats);
 
 const ctx = document.getElementById("statsChart").getContext("2d");
 //if I possibly want gradient bar colors
@@ -115,14 +115,14 @@ const ctx = document.getElementById("statsChart").getContext("2d");
 let statsChart = new Chart(ctx, {
   type: "bar",
   data: {
-    // labels: sortedNamesArr,
+    labels: sortedNamesArr.slice(0, 10),
     datasets: [
       {
-        label: selectedStat, //`${Object.keys(playersArr[0])[1]}`
+        label: selectedStat,
         data: sortedPlayersStats,
         //for gradient bar use backgroundColor: gradient
-        backgroundColor: ["rgba(255, 159, 64, 0)"],
-        borderColor: ["rgba(0, 0, 0, 0)"],
+        backgroundColor: ["rgba(255, 159, 64, 1)"],
+        borderColor: ["rgba(0, 0, 0, 0.1)"],
         borderWidth: 1,
       },
     ],
@@ -156,7 +156,7 @@ let statsChart = new Chart(ctx, {
         ticks: {
           color: "white",
           font: {
-            size: 25,
+            size: 16,
           },
         },
         //possibile alternative to reverse values
@@ -220,9 +220,9 @@ statsPicker.addEventListener("click", (clickEvent) => {
   statsChart.data.labels = sortedNamesArr.slice(0, 10);
   statsChart.data.datasets = [
     {
-      label: updatedLabel, //`${Object.keys(playersArr[0])[1]}`
+      label: updatedLabel,
       data: sortedPlayersStats,
-      backgroundColor: ["rgba(255, 159, 64, 0.7)"],
+      backgroundColor: ["rgba(255, 159, 64, 1)"],
       borderColor: ["rgba(0, 0, 0, 0.1)"],
       borderWidth: 1,
     },
@@ -273,7 +273,8 @@ function createCardForPlayer() {
   });
 }
 
-async function createPlayerCard(player) {
+//async removed
+function createPlayerCard(player) {
   createPlayerInfoContainer(player);
 }
 
@@ -299,7 +300,7 @@ function createPlayerInfoContainer(player) {
   renderPlayerRegion(player, playerDataInfo);
   renderPlayerTeamAffiliation(player, playerDataInfo);
   renderPlayerAge(player, playerDataInfo);
-  renderPlayerRating(player, playerDataInfo);
+  // renderPlayerRating(player, playerDataInfo);
 }
 
 function renderPlayerPicture(player, playerInfoInner1) {
@@ -380,17 +381,17 @@ function renderPlayerAge(player, playerDataInfo) {
   playerAge.appendChild(playerAgeInfo);
 }
 
-function renderPlayerRating(player, playerDataInfo) {
-  const playerRating = document.createElement("div");
-  playerRating.classList.add("playerRating");
-  playerDataInfo.appendChild(playerRating);
-  const playerRatingScore = document.createElement("h4");
-  playerRatingScore.textContent = "Rating:";
-  playerRating.appendChild(playerRatingScore);
-  const playerRatingInfo = document.createElement("div");
-  playerRatingInfo.textContent = player.rating;
-  playerRating.appendChild(playerRatingInfo);
-}
+// function renderPlayerRating(player, playerDataInfo) {
+//   const playerRating = document.createElement("div");
+//   playerRating.classList.add("playerRating");
+//   playerDataInfo.appendChild(playerRating);
+//   const playerRatingScore = document.createElement("h4");
+//   playerRatingScore.textContent = "Rating:";
+//   playerRating.appendChild(playerRatingScore);
+//   const playerRatingInfo = document.createElement("div");
+//   playerRatingInfo.textContent = player.rating;
+//   playerRating.appendChild(playerRatingInfo);
+// }
 
 createCardForPlayer();
 
@@ -408,19 +409,3 @@ close.addEventListener("click", () => {
 });
 
 //search bar function
-function search_animal() {
-  let input = document.getElementById("searchbar").value;
-  input = input.toLowerCase();
-  let x = document.querySelector("#list-holder");
-  x.innerHTML = "";
-
-  for (i = 0; i < data.length; i++) {
-    let obj = data[i];
-
-    if (obj.Name.toLowerCase().includes(input)) {
-      const elem = document.createElement("li");
-      elem.innerHTML = `${obj.Name} - ${obj.Color}`;
-      x.appendChild(elem);
-    }
-  }
-}
