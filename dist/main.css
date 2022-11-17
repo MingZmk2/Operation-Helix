@@ -127,13 +127,13 @@ body {
   background-size: cover;
   height: 100vh;
   width: 100%;
-  background-color: rgba(66, 70, 78, 0.8196078431);
+  background-color: rgba(0, 0, 0, 0.7137254902);
   color: white;
   cursor: crosshair;
 }
 
 header {
-  color: white;
+  color: #FF9F40;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -142,7 +142,7 @@ header {
   max-width: 102rem;
   margin: 70px auto;
   height: 80px;
-  background-color: rgba(66, 70, 78, 0.8196078431);
+  background-color: rgba(0, 0, 0, 0.7137254902);
 }
 
 .title {
@@ -208,7 +208,7 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   font-family: "Inter", sans-serif;
-  background: rgba(66, 70, 78, 0.8196078431);
+  background: rgba(0, 0, 0, 0.7137254902);
   display: flex;
   position: relative;
   flex-direction: row;
@@ -231,9 +231,9 @@ main {
   margin: 5px 5px;
   position: relative;
   flex-direction: column;
-  max-height: 300px;
-  height: calc((99vh - 8px) / 4);
-  background-color: hwb(235 7% 84%/0.278);
+  max-height: 350px;
+  height: calc((110vh - 8px) / 4);
+  background-color: #000000;
 }
 .players-section .players-container {
   display: flex;
@@ -242,8 +242,7 @@ main {
   min-width: 175px;
   max-height: 300px;
   margin: 0 auto;
-  margin-top: 20px;
-  padding-top: 50px;
+  margin-top: 10px;
 }
 .players-section .players-container h2 {
   text-align: center;
@@ -263,6 +262,7 @@ main {
 }
 .players-section .players-container #player-selection-container {
   overflow-y: scroll;
+  margin-bottom: 100px;
 }
 .players-section .players-container #player-selection-container .player-container {
   margin: 0 auto;
@@ -280,7 +280,6 @@ main {
 }
 
 main > .bar-chart {
-  background-color: hwb(235 7% 84%/0.278);
   display: flex;
   position: relative;
   flex-direction: column;
@@ -288,7 +287,7 @@ main > .bar-chart {
   max-width: 500px;
   max-height: 1025px;
   height: calc((274vh - 8px) / 4);
-  margin: 5px auto;
+  margin: 15px auto;
 }
 
 #statsChart {
@@ -314,14 +313,14 @@ ul {
 }
 
 .selected {
-  background-color: #dab847;
+  background-color: #FF9F40;
   color: #1f1f1f;
 }
 
 #statistics li:hover {
   cursor: pointer;
-  background-color: #dab847;
-  color: #1f1f1f;
+  background-color: #FF9F40;
+  color: #000000;
   opacity: 90%;
   transition-duration: 0.3s;
 }
@@ -344,4 +343,13 @@ ul {
   height: calc((99vh - 8px) / 4);
   margin-top: -100px;
   left: 0px;
+}
+
+#statistics {
+  margin-left: -30px;
+}
+
+#buttons-section > h1 {
+  margin-top: 100px;
+  margin-left: 10px;
 }
