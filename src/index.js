@@ -66,14 +66,14 @@ const statToKey = {
   "Maps Played": "mapsPlayed",
 };
 
-// const statInfo = {
-//   rating: "Above or below average numbers",
-//   kdr: "Total player kills before dying in a match",
-//   headshots: "Percentage of kills made with a headshot",
-//   kills: "Total player kills so far professionally",
-//   deaths: "Total game deaths so far professionally",
-//   mapsPlayed: "Total maps played professionally so far",
-// };
+const statInfo = {
+  rating: "-Top 10 players-",
+  kdr: "-Top 10 players-",
+  headshots: "-Top 10 players-",
+  kills: "-Top 10 players-",
+  deaths: "-Top 10 players-",
+  mapsPlayed: "-Top 10 players-",
+};
 
 // // left container for all players
 // let emptyPlayerslist = document.getElementById("playersList");
@@ -96,7 +96,7 @@ let sortedPlayersStats = sortedPlayersArr.map(
   (playerObj) => playerObj[selectedStat]
 );
 let sortedNamesArr = sortedPlayersArr.map((playerObj) => playerObj.nickname);
-// let axisUnit = statInfo[selectedStat];
+let axisUnit = statInfo[selectedStat];
 let updatedLabel = Object.keys(statToKey).find(
   (key) => statToKey[key] === selectedStat
 );
@@ -121,6 +121,7 @@ let statsChart = new Chart(ctx, {
         label: selectedStat,
         data: sortedPlayersStats,
         //for gradient bar use backgroundColor: gradient
+        HoverBackgroundColor: "#b01700",
         backgroundColor: ["rgba(255, 159, 64, 1)"],
         borderColor: ["rgba(0, 0, 0, 0.1)"],
         borderWidth: 1,
@@ -135,10 +136,12 @@ let statsChart = new Chart(ctx, {
       x: {
         title: {
           display: true,
-          // text: axisUnit,
-          color: "white",
+          text: axisUnit,
+          color: "#FF9F40",
           font: {
-            size: 16,
+            family: "'Roboto', sans-serif",
+            weight: 400,
+            size: 14,
           },
         },
         position: "top",
@@ -146,7 +149,7 @@ let statsChart = new Chart(ctx, {
           font: {
             size: 14,
           },
-          color: "white",
+          color: "#FF9F40",
           callback: function (value, index, ticks) {
             return new Intl.NumberFormat().format(value);
           },
@@ -154,8 +157,10 @@ let statsChart = new Chart(ctx, {
       },
       y: {
         ticks: {
-          color: "white",
+          color: "#FF9F40",
           font: {
+            family: "'Roboto', sans-serif",
+            weight: 400,
             size: 16,
           },
         },
@@ -168,8 +173,10 @@ let statsChart = new Chart(ctx, {
         display: true,
         fullSize: false,
         text: updatedLabel,
-        color: "white",
+        color: "#FF9F40",
         font: {
+          family: "'Roboto', sans-serif",
+          weight: 500,
           size: 24,
         },
       },
@@ -192,13 +199,9 @@ let statsPicker = document.getElementById("statistics");
 
 //create eventListener for option to choose a stat to see
 statsPicker.addEventListener("click", (clickEvent) => {
-  document
-    .querySelector(`[id="statistics"] .${selectedStat}`)
-    .classList.remove("selected");
+  document.querySelector(`.${selectedStat}`).classList.remove("selected");
   selectedStat = clickEvent.target.className;
-  document
-    .querySelector(`[id="statistics"] .${selectedStat}`)
-    .classList.add("selected");
+  document.querySelector(`.${selectedStat}`).classList.add("selected");
 
   if (selectedStat === "rating") {
     sortedPlayersArr = playersArr.sort(
@@ -219,7 +222,7 @@ statsPicker.addEventListener("click", (clickEvent) => {
     (key) => statToKey[key] === selectedStat
   );
 
-  // axisUnit = statInfo[selectedStat];
+  axisUnit = statInfo[selectedStat];
 
   statsChart.data.labels = sortedNamesArr.slice(0, 10);
   statsChart.data.datasets = [
@@ -231,7 +234,7 @@ statsPicker.addEventListener("click", (clickEvent) => {
       borderWidth: 1,
     },
   ];
-  // statsChart.options.scales.x.title.text = axisUnit;
+  statsChart.options.scales.x.title.text = axisUnit;
   statsChart.options.plugins.title.text = updatedLabel;
 
   if (selectedStat === "rating") {
@@ -247,7 +250,7 @@ statsPicker.addEventListener("click", (clickEvent) => {
     };
   } else {
     statsChart.options.scales.x.ticks = {
-      color: "white",
+      color: "#FF9F40",
       font: {
         size: 14,
       },
@@ -266,13 +269,6 @@ function createCardForPlayer() {
       .addEventListener("click", (e) => {
         e.preventDefault();
         createPlayerCard(player);
-        // .then(window.scrollTo(0, 0))
-        // .then((document.querySelector(".searchbar").value = ""));
-        // .then(
-        //   playerContainerElement.forEach(
-        //     (e) => (e.style.display = "block")
-        //   )
-        // );
       });
   });
 }
