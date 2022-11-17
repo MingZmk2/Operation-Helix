@@ -137,7 +137,7 @@ select {
 }
 
 body {
-  background-image: url(/images/csgo_dust2.png);
+  background-image: url(assets/csgo_dust2.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
