@@ -78,18 +78,11 @@ const statInfo = {
 // // left container for all players
 // let emptyPlayerslist = document.getElementById("playersList");
 
-// Player stat sorting
+// Player stat sorting from best to worst in top 10
 let selectedStat = "rating";
-let sortedPlayersArr;
-if (selectedStat === "rating") {
-  sortedPlayersArr = playersArr.sort(
-    (a, b) => a[selectedStat] - b[selectedStat]
-  );
-} else {
-  sortedPlayersArr = playersArr.sort(
-    (a, b) => b[selectedStat] - a[selectedStat]
-  );
-}
+let sortedPlayersArr = playersArr.sort(
+  (a, b) => b[selectedStat] - a[selectedStat]
+);
 
 //begin building bar chart
 let sortedPlayersStats = sortedPlayersArr.map(
@@ -106,10 +99,6 @@ let updatedLabel = Object.keys(statToKey).find(
 // console.log(sortedPlayersStats);
 
 const ctx = document.getElementById("statsChart").getContext("2d");
-//if I possibly want gradient bar colors
-// const gradient = ctx.createLinearGradient(5, 730, 5, 100);
-// gradient.addColorStop(0, "#BFBFBF");
-// gradient.addColorStop(1, "#403F40");
 
 //declare variable to initiate new bar Chart instance
 let statsChart = new Chart(ctx, {
@@ -164,8 +153,6 @@ let statsChart = new Chart(ctx, {
             size: 16,
           },
         },
-        //possibile alternative to reverse values
-        // reverse: reversed
       },
     },
     plugins: {
@@ -203,15 +190,9 @@ statsPicker.addEventListener("click", (clickEvent) => {
   selectedStat = clickEvent.target.className;
   document.querySelector(`.${selectedStat}`).classList.add("selected");
 
-  if (selectedStat === "rating") {
-    sortedPlayersArr = playersArr.sort(
-      (a, b) => a[selectedStat] - b[selectedStat]
-    );
-  } else {
-    sortedPlayersArr = playersArr.sort(
-      (a, b) => b[selectedStat] - a[selectedStat]
-    );
-  }
+  sortedPlayersArr = playersArr.sort(
+    (a, b) => b[selectedStat] - a[selectedStat]
+  );
 
   sortedPlayersStats = sortedPlayersArr.map(
     (playerObj) => playerObj[selectedStat]
