@@ -129,7 +129,7 @@ let statsChart = new Chart(ctx, {
           color: "#FF9F40",
           font: {
             family: "'Roboto', sans-serif",
-            weight: 400,
+            weight: 500,
             size: 14,
           },
         },
