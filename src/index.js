@@ -183,7 +183,9 @@ let statsPicker = document.getElementById("statistics");
 //create eventListener for option to choose a stat to see
 statsPicker.addEventListener("click", (clickEvent) => {
   document.querySelector(`.${selectedStat}`).classList.remove("selected");
+  console.log(selectedStat);
   selectedStat = clickEvent.target.className;
+  console.log(selectedStat);
   document.querySelector(`.${selectedStat}`).classList.add("selected");
 
   sortedPlayersArr = playersArr.sort(
