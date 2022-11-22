@@ -75,9 +75,6 @@ const statInfo = {
   mapsPlayed: "-Top 10 players-",
 };
 
-// // left container for all players
-// let emptyPlayerslist = document.getElementById("playersList");
-
 // Player stat sorting from best to worst in top 10
 let selectedStat = "rating";
 let sortedPlayersArr = playersArr.sort(
