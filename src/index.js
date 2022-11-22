@@ -109,7 +109,6 @@ let statsChart = new Chart(ctx, {
       {
         label: selectedStat,
         data: sortedPlayersStats,
-        //for gradient bar use backgroundColor: gradient
         HoverBackgroundColor: "#b01700",
         backgroundColor: ["rgba(255, 159, 64, 1)"],
         borderColor: ["rgba(0, 0, 0, 0.1)"],
