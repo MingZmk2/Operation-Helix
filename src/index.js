@@ -154,8 +154,6 @@ let statsChart = new Chart(ctx, {
 // right stats picker
 let statsPicker = document.getElementById("statistics");
 
-// console.log(statsPicker.children);
-
 //create eventListener for option to choose a stat to see
 statsPicker.addEventListener("click", (e) => {
   if (e.target == e.currentTarget) return;
