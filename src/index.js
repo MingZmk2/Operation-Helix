@@ -161,7 +161,6 @@ statsPicker.addEventListener("click", (e) => {
   if (e.target == e.currentTarget) return;
   selectedStat = e.target.className;
   // document.querySelector(`.${selectedStat}`).classList.remove("selected");
-  // console.log(selectedStat);
   // document.querySelector(`.${selectedStat}`).classList.add("selected");
 
   sortedPlayersArr = playersArr.sort(
