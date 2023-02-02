@@ -1,18 +1,4 @@
-// import * as allPlayersInfo from "./scripts/fetchPlayers";
-
-// allPlayersInfo.getPlayersData();
-
-//fetching from local host may cause problems will not use for now
-
-// import teams from "./data/teams.json";
 import players from "./data/players.json";
-
-// teams.forEach((team) => console.log(team));
-
-//iterate through array
-// teams.forEach((team) => {
-//   team.players.forEach();
-// });
 
 // creating a list of players dynamically from array
 let playerSelectionContainer = document.getElementById(
@@ -28,14 +14,7 @@ function createPlayersList() {
     let players = document.createElement("div");
     players.classList.add("players");
     players.setAttribute("id", player.nickname.replace(/ /g, ""));
-    // console.log(player.nickname);
     playerContainer.appendChild(players);
-
-    // let teamLogo = document.createElement("img");
-    // teamLogo.title = player.team;
-    // teamLogo.src = `${player.teamLogo}`;
-    // teamLogo.alt = player.team;
-    // players.appendChild(teamLogo);
 
     let playerName = document.createElement("div");
     playerName.classList.add("player-name");
@@ -46,7 +25,7 @@ function createPlayersList() {
 
 createPlayersList();
 
-//fucntion to return an array of object players
+//function to return an array of object players
 let playersArr = [];
 
 function getPlayersFomArr() {
@@ -54,7 +33,6 @@ function getPlayersFomArr() {
 }
 
 getPlayersFomArr();
-// console.log(playersArr);
 
 //creating bar chart
 const statToKey = {
@@ -90,10 +68,6 @@ let axisUnit = statInfo[selectedStat];
 let updatedLabel = Object.keys(statToKey).find(
   (key) => statToKey[key] === selectedStat
 );
-
-// console.log(sortedPlayersArr);
-// console.log(sortedNamesArr);
-// console.log(sortedPlayersStats);
 
 const ctx = document.getElementById("statsChart").getContext("2d");
 
@@ -180,13 +154,16 @@ let statsChart = new Chart(ctx, {
 // right stats picker
 let statsPicker = document.getElementById("statistics");
 
+// console.log(statsPicker.children);
+
 //create eventListener for option to choose a stat to see
-statsPicker.addEventListener("click", (clickEvent) => {
-  document.querySelector(`.${selectedStat}`).classList.remove("selected");
-  console.log(selectedStat);
-  selectedStat = clickEvent.target.className;
-  console.log(selectedStat);
-  document.querySelector(`.${selectedStat}`).classList.add("selected");
+statsPicker.addEventListener("click", (e) => {
+  if (e.target == e.currentTarget) return;
+  selectedStat = e.target.className;
+  // debugger;
+  // document.querySelector(`.${selectedStat}`).classList.remove("selected");
+  // console.log(selectedStat);
+  // document.querySelector(`.${selectedStat}`).classList.add("selected");
 
   sortedPlayersArr = playersArr.sort(
     (a, b) => b[selectedStat] - a[selectedStat]
@@ -252,12 +229,7 @@ function createCardForPlayer() {
   });
 }
 
-//async removed
 function createPlayerCard(player) {
-  createPlayerInfoContainer(player);
-}
-
-function createPlayerInfoContainer(player) {
   const playerInfo = document.getElementById("playerInfo");
   playerInfo.innerHTML = "";
 
@@ -279,7 +251,6 @@ function createPlayerInfoContainer(player) {
   renderPlayerRegion(player, playerDataInfo);
   renderPlayerTeamAffiliation(player, playerDataInfo);
   renderPlayerAge(player, playerDataInfo);
-  // renderPlayerRating(player, playerDataInfo);
 }
 
 function renderPlayerPicture(player, playerInfoInner1) {
@@ -318,9 +289,6 @@ function renderPlayerRegion(player, playerDataInfo) {
   const playerRedionTitle = document.createElement("h4");
   playerRedionTitle.textContent = "Region: ";
   playerRegion.appendChild(playerRedionTitle);
-  // const playerRegionInfo = document.createElement("div");
-  // playerRegionInfo.textContent = player.country.name;
-  // playerRegion.appendChild(playerRegionInfo);
   const playerRegionFlag = document.createElement("img");
   playerRegionFlag.classList.add("player-region-flag");
   playerRegionFlag.title = player.country.name;
