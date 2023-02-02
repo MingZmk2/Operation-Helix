@@ -160,7 +160,6 @@ let statsPicker = document.getElementById("statistics");
 statsPicker.addEventListener("click", (e) => {
   if (e.target == e.currentTarget) return;
   selectedStat = e.target.className;
-  // debugger;
   // document.querySelector(`.${selectedStat}`).classList.remove("selected");
   // console.log(selectedStat);
   // document.querySelector(`.${selectedStat}`).classList.add("selected");
